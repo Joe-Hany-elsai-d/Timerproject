@@ -1,0 +1,85 @@
+#watch-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--page-background);    
+}
+  
+  .stop-watch {
+    animation: slideIn 0.3s ease forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .watch-cont {
+    display: flex;
+    align-items: baseline; /* Align items to the same baseline */
+    gap: 0.5rem;
+    color: white;
+  }
+  
+  .sw-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+  }
+  
+  .sw-time span {
+    font-size: medium;
+    line-height: 1rem; /* Adjust line-height for better alignment */
+  }
+  
+  .sw-time h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Larger size for numbers */
+    line-height: 1; /* Adjust for baseline alignment */
+  }
+  
+  .separator {
+    font-size: 3rem; /* Match size with numbers */
+    line-height: 1;
+  }
+  
+  .milliseconds {
+    font-size: 1.5rem;
+    
+  }
+  
+  .sw-btn {
+    width: 4rem;
+    aspect-ratio: 1/1;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+  }
+  
+  .sw-btn.sw-run {
+    background-color: var(--toggle-timer-clr);
+    color: black;
+  }
+  
+  .sw-btn.sw-reset {
+    background-color: var(--reset-background);
+    color: white;
+  }
+  
+  .sw-btn.sw-reset:disabled {
+    color: var(--disabled-reset-clr);
+    background-color: var(--disabled-reset-back);
+    cursor: not-allowed;
+  }
+  
+  .sw-bottom-btn {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+@media (max-width: 800px) {
+  #watch-page {
+    width: 100vw;
+  }
+}  

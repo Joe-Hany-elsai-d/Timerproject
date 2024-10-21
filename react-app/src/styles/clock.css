@@ -1,0 +1,44 @@
+.clock-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    animation: slideIn 0.3s ease forwards;
+}
+.clock-item {
+    border-radius: 5px;
+    background-color: var(--timer-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    height: 4rem;
+    color: var(--text-clr);
+}
+
+.clock-item .clock-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}  
+.clock-item .clock-date h3 {
+    margin: 0.2rem;   
+}
+
+.clock-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.clock-time span {
+    width: 2.2rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 7px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-time span:hover {
+    background-color: var(--adds-back-btns);
+}

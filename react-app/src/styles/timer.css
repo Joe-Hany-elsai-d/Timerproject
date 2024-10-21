@@ -1,0 +1,239 @@
+.timers-sec {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;   
+  transform: translateY(100%);
+  animation: slideIn 0.3s ease forwards;   
+}
+.timer-page {
+  padding: 1rem 5rem;
+  background-color: var(--page-background); 
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;  
+  
+}
+.timer-item.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999; /* Ensure it’s above other elements */
+  background-color: var(--page-background); /* Set your desired background color */
+}
+.timer-item.fullscreen .timer-label p{
+  visibility: hidden;  
+}
+.timer-item.fullscreen .time {
+  font-size: 4.25rem;
+  line-height: 1.75rem;
+} 
+.timer-item.fullscreen .timer-handler {
+  margin-bottom: 4.5rem;
+  gap: 2rem;
+}
+.timer-item.fullscreen .timer-handler .button {
+    width: 5rem;
+    font-size: 1.5rem;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform : translateY(0);
+  }
+}
+.timer-page.backdrop::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Dim background with transparency */
+  z-index: 100; /* Ensure it's above the page content */
+}
+
+.bottom-btns {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  background-color: var(--buttons-back);
+  border-radius: 13px;
+  border: var(--border-gray);
+  width: 6.2rem;
+  height: 3.2rem;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 8px 8px 8px rgb(0, 0, 0, 0.25);    
+}
+.edit {
+  background-color: inherit;
+  border: none;
+  color: var(--text-clr);
+  width: 50%;
+  height: 100%;
+}
+/* .edit:disabled {
+   something goes here 
+}  */
+.edit:hover {
+  background-color: var(--adds-back-btns);
+  border-radius: 10px;
+}
+.timer-item { 
+  height: 17rem;
+  padding: 0.45rem;  
+  padding-bottom: 1rem; 
+  border-radius: 10px;
+  background-color: var(--timer-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.1s ease-in;
+  color: var(--text-clr);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.timer-item:hover {
+  transform: translateY(-0.25rem);
+  background-color: var(--timer-hover);
+  border: var(--border-gray);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25), 0 8px 30px rgba(0, 0, 0, 0.2); 
+}
+
+.timer-label {
+  font-weight: 500;
+  font-size: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.timer-label span {
+  width: 2.2rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 7px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timer-label p {
+    margin: 0;
+    padding: 0;  
+}
+.del {
+    color: var(--del-btn);
+}
+.timer-label span:hover {
+  background-color: var(--adds-back-btns);
+}
+.time {  
+  line-height: 1.25rem;
+  display: flex;
+}
+.time.disabled {
+  color: var(--disabled-text-clr);
+}
+.timer-handler {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.timer-start {
+  background-color: var(--toggle-timer-clr);
+  color: black;
+}
+.button {
+  font-size: 0.7rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  text-align: center;
+  aspect-ratio: 1 / 1;
+  border: none;
+}
+.reset-btn {
+  background-color: var(--reset-background);
+}
+.reset-btn:disabled {
+  color: var(--disabled-reset-clr);
+  background-color: var(--disabled-reset-back);
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+.timer-start:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--disabled-start-back);
+  color: var(--disabled-start-clr);
+}
+.span.disabled {
+  color: var(--disabled-text-clr);
+}
+.notfound-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-clr); 
+}
+.notfound-text p {
+  color: rgb(108, 105, 105);
+}
+
+.timer-page.backdrop .timers-sec, 
+.timer-page.backdrop .bottom-btns {
+    pointer-events: none;
+}
+
+#menu-icon {
+  border: none;
+  cursor: pointer;
+  background-color: var(--nav-back);
+  transition: all 0.3s ease;
+  display: none;
+  z-index: 20000;
+  color: var(--text-clr);
+  width: auto;
+  padding: 0.5rem;
+  height: 2rem;
+  
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  margin-bottom: 1rem;
+}
+#menue-icon:hover {
+  background-color: var(--active-back);
+}
+@media (min-width: 670px) and (max-width: 1000px) {
+  .timers-sec {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}
+@media (max-width: 800px) {
+  #menu-icon {
+    display: block;
+  }
+  .timer-page{
+    padding: 0.5rem;
+    width: 100vw;
+  }
+ 
+}
+@media (max-width: 670px) {
+  .timers-sec {
+    grid-template-columns: 1fr;
+  }
+  
+}  

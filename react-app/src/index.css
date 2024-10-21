@@ -1,0 +1,63 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;  
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --toggle-timer-clr: #88d48c; /* A slightly more muted green */
+  --page-background: #1c1c1e; /* Slightly darker for better contrast */
+  --side-bar: #1d2025; /* Darker side bar for separation */
+  --timer-background: #272a2d; /* Softer dark gray for the timer background */
+  --timer-hover:#2b2e32; /* Darker hover effect for timers */
+  --time: #d9dfe3; /* Light, soft gray for the timer text */
+  --s: #4a4f54; /* Muted gray for supporting text */
+  --reset-background: #34373a; /* Slightly darker reset button */
+  --text-clr: white; /* Bright white text */
+  --timer-clr: #bebcbc;
+  --disabled-start-clr: #b3e6b5; /* Light green for disabled Start button text */
+  --disabled-start-back: #516852; /* Muted green background for disabled Start button */
+  --disabled-reset-clr: #a1a1a1; /* Gray for disabled Reset button text */
+  --disabled-reset-back: #424446; /* Darker gray background for disabled Reset button */
+  --border-gray: #4f4f4f;
+  --adds-back-btns: #35383b; 
+  --buttons-back: #2d3136;
+  --del-btn: rgba(225, 44, 44, 0.862);
+  --disabled-text-clr: #6c757d; /* Muted gray for disabled text */
+  --input-hover-bg: #2d2f36;  /* Background color for input hover */
+  --input-hover-border: #c4c4c4;  /* Border color for input hover */
+  --button-hover-bg: #5a6268;  /* Background color for button hover */
+  --button-hover-color: white;  /* Text color for button hover */
+  --hover-up-arr-btn: #666; /* Hover color for up/down buttons */
+  --search-results-back: #3b3e41;
+  --search-results-hover : #424649; 
+  --input-hover-color: #777; /* Border color on input hover */
+  --focus-input-color: #888; /* Border color when input is focused */
+  --save-btn-hover-color: #218838; /* Hover color for save button */
+  --cancel-btn-hover-color: #c82333; /* Hover color for cancel button */
+  --active-time-bg: #3e8e41; /* Background color for active time */
+  --nav-back: rgb(21, 19, 19);
+  --active-back: rgb(49, 44, 44);
+
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  height: 5px; /* Height of the scrollbar */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}

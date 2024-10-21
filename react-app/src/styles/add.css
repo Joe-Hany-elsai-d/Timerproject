@@ -1,0 +1,160 @@
+.add-com {
+    color: var(--text-clr);
+    border-radius: 10px;
+    background-color: var(--timer-background);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 22rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 1000;
+
+}
+
+.time-func {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+   
+}
+
+.up-arr {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.up-arr button {
+    color: var(--text-clr);
+    background-color: inherit;
+    width: 2.5rem;
+    aspect-ratio: 1 / 1;
+    padding: 0.6rem;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.up-arr button:hover {
+    background-color: var(--hover-up-arr-btn);
+}
+
+.hovered {
+    height: 100%;
+    width: 5rem;
+    font-size: 2rem;
+    border-radius: 5px;
+    color: var(--timer-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hovered.active {
+    color: var(--text-clr);
+    background-color: var(--hover-up-arr-btn);
+}
+
+.add-time {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--toggle-timer-clr);
+    background-color: #1a1b1f; /* Unique background */
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input-field input {
+    padding: 0.5rem 1rem;
+    width: 15rem;
+    outline: none;
+    color: white;
+    border-radius: 8px;
+    background-color: inherit;     
+    border: none;
+}
+
+#remove-btn {
+    display: none;
+    border: none;
+    background-color: inherit;
+    color: white;
+}
+.input-field input:focus ~ #remove-btn {
+    display: block;
+}
+.icon-btn {
+    background-color: inherit;
+    border: none;
+}
+
+.check-out {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-btn {
+    width: 9rem;
+    height: 2.5rem;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.save-btn {
+    color: white;
+    background-color: var(--toggle-timer-clr);
+}    
+
+.save-btn:hover {   
+    transform: scale(1.05);
+}
+
+.cancel-btn {
+    color: white;
+    background-color: var(--adds-back-btns);
+}
+
+.cancel-btn:hover {  
+    transform: scale(1.05);
+}
+
+#form {
+    display: flex;
+    align-items: center;
+    width: 17rem;
+    background-color: var(--adds-back-btns);
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+#form:focus-within{
+    border-color: var(--focus-input-color);
+} 
+#form:hover{
+    border-color: var(--input-hover-color);
+}
